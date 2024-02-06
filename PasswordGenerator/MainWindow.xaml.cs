@@ -48,9 +48,9 @@ namespace PasswordGenerator
         private void Generate_button_Click(object sender, RoutedEventArgs e)
         {
             string TbLength = Length.Text;
-            bool? CLetters = Letters.IsChecked; //1
-            bool? CNumbers = Numbers.IsChecked; //2
-            bool? CSigns = Signs.IsChecked; //3
+            bool? CLetters = Letters.IsChecked; 
+            bool? CNumbers = Numbers.IsChecked; 
+            bool? CSigns = Signs.IsChecked; 
             List<int> types = new List<int> { 0 };
             List<string> SpecialSigns = new List<string> { "{","}","!","?","@","/","\\" };
             string password = "";
@@ -77,25 +77,25 @@ namespace PasswordGenerator
                     int nexttype = GetRandomElement(types);
                     if (nexttype == 0)
                     {
-                        int randomNumber = random.Next(97, 123); // Генерация случайного числа от 97 ('a') до 122 ('z')
-                        char randomChar = (char)randomNumber; // Преобразование числа обратно в символ
+                        int randomNumber = random.Next(97, 123); 
+                        char randomChar = (char)randomNumber; 
                         password += randomChar;
                     }
                     if (nexttype == 1)
                     {
-                        int randomNumber = random.Next(65, 91); // Генерация случайного числа от 97 ('a') до 122 ('z')
-                        char randomChar = (char)randomNumber; // Преобразование числа обратно в символ
+                        int randomNumber = random.Next(65, 91); 
+                        char randomChar = (char)randomNumber; 
                         password += randomChar;
                     }
                     if (nexttype == 2)
                     {
-                        int randomNumber = random.Next(48, 58); // Генерация случайного числа от 97 ('a') до 122 ('z')
-                        char randomChar = (char)randomNumber; // Преобразование числа обратно в символ
+                        int randomNumber = random.Next(48, 58); 
+                        char randomChar = (char)randomNumber; 
                         password += randomChar;
                     }
                     if (nexttype == 3)
                     {
-                        string randomChar = GetRandomElement(SpecialSigns); // Преобразование числа обратно в символ
+                        string randomChar = GetRandomElement(SpecialSigns); 
                         password += randomChar;
                     }
 
