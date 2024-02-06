@@ -1,0 +1,21 @@
+﻿<Window x:Class="PasswordGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PasswordGenerator"
+        mc:Ignorable="d"
+        Title="Password Generator" Height="270" Width="350">
+    <Grid>
+        <Label Content="Password Generator" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="  Length" HorizontalAlignment="Left" Margin="60,52,0,0" VerticalAlignment="Top" Width="59"/>
+        <Label Content="Сapital letters?" HorizontalAlignment="Left" Margin="29,83,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Use numbers?" HorizontalAlignment="Left" Margin="33,114,0,0" VerticalAlignment="Top" Width="86"/>
+        <Label Content="Special signs?" HorizontalAlignment="Left" Margin="36,145,0,0" VerticalAlignment="Top" Width="83"/>
+        <CheckBox x:Name="Letters" Content="" HorizontalAlignment="Left" Margin="124,88,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="Numbers" Content="" HorizontalAlignment="Left" Margin="124,119,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="Signs" Content="" HorizontalAlignment="Left" Margin="124,150,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Length" HorizontalAlignment="Left" Margin="124,56,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="120" PreviewTextInput="Length_PreviewTextInput" TextChanged="Length_TextChanged" />
+        <Button x:Name="Generate_button" Content="Generate Password" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,192,0,0" Click="Generate_button_Click"/>
+    </Grid>
+</Window>
